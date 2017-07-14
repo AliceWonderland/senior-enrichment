@@ -10,7 +10,8 @@ Make a thing!
 4. Check out the mock-view in the `wireframes` folder
 5. Start the build process with: `npm run build-watch`
 6. In another terminal, start your app with `npm start`
-7. If you navigate to the URL you should see some UI already :) [We already have some connection code to get you started]
+7. PLEASE RUN `npm seed` TO SEED THE DATABASE. THANKS! (Must run in a separate terminal while `npm start` is running.)
+8. If you navigate to the URL you should see some UI and Data + A Fully Functioning App :)
 
 ## Requirements
 
