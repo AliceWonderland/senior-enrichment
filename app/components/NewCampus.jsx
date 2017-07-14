@@ -13,7 +13,7 @@ export default class NewCampus extends Component{
     }
 
     componentDidMount(){
-        // if edit state, get campus data
+        // if in edit state, get campus data
         if(!this.formNew){
             var campusId = this.props.match.params.campusId;
             axios.get(`/api/campuses/${campusId}`)

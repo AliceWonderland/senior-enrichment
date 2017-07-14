@@ -13,8 +13,6 @@ const Student = require('./student');
 Student.belongsTo(Campus);
 Campus.hasMany(Student);
 
-// NOT SURE HOW TO SETUP RELATIONSHIPS
-// Student can only belong to one Campus. hasOne or belongsTo?
 // When deleting a Campus do we delete the students? Or how do we modify their campusIDs? Using a default ID?
 // Do not allow a Campus deletion until there are no students associated with it?
 

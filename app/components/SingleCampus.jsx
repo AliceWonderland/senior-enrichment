@@ -32,7 +32,7 @@ export default class SingleCampus extends Component{
             url: '/api/students/'+e.target.id
         })
         .then(res =>{
-            axios.get('/api/students')
+            axios.get(`/api/campuses/${this.state.campus.id}/students`)
             .then(res => res.data)
             .then(students => this.setState({ students }));
         });
@@ -70,16 +70,17 @@ export default class SingleCampus extends Component{
                 <div className="row">
                     <div className="col-md-12">
                         <div className="page-header">
-                            <h2>All Students in { campus.name } Campus ({students.length}) <Link to="/students/new">
-                                <button type="button" className="btn btn-primary" style={styles}>+ Add Student</button>
-                            </Link></h2>
+                            <h2>All Students in { campus.name } Campus ({students.length})
+                                <Link to="/students/new">
+                                    <button type="button" className="btn btn-primary" style={styles}>+ Add Student</button>
+                                </Link>
+                            </h2>
                         </div>
 
                         <table className="table table-striped">
                             <thead>
                             <tr>
                                 <th>#</th>
-                                {/*<th>Photo</th>*/}
                                 <th>Student Name</th>
                                 <th>Campus</th>
                                 <th>Email</th>
@@ -93,7 +94,6 @@ export default class SingleCampus extends Component{
                                     return (
                                         <tr key={students.id}>
                                             <td>{ students.id }</td>
-                                            {/*<td><Link to={`/students/${students.id}`}><img src={students.image} style={stylesImg} /></Link></td>*/}
                                             <td><Link
                                                 to={`/students/view/${students.id}`}>{ `${students.firstName} ${students.lastName}`}</Link>
                                             </td>
@@ -109,7 +109,6 @@ export default class SingleCampus extends Component{
                             }
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>

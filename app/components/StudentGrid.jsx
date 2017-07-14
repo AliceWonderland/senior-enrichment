@@ -49,19 +49,11 @@ export default class Student extends Component{
                     <Link to="/students/new"><button type="button" className="btn btn-primary" style={styles}>+ Add Student</button></Link>
                 </h2>
 
-
-
                 <hr />
+
                 {
                     students.map(students => {
                         return (
-
-
-
-
-
-
-
 
                         <div className="col-sm-6 col-md-4" key={students.id}>
                             <div className="thumbnail">
@@ -76,13 +68,9 @@ export default class Student extends Component{
                             </div>
                         </div>
 
-
-
                         );
                     })
                 }
-
-
 
             </div>
 

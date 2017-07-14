@@ -27,6 +27,7 @@ api.get('/students', (req, res, next) => {
 
 });
 
+// GET BY ID
 api.get('/students/:studentId', (req, res, next) => {
     var studentId=req.params.studentId;
 
@@ -43,6 +44,7 @@ api.get('/students/:studentId', (req, res, next) => {
 
 });
 
+// ADD STUDENT
 api.post('/students/new', (req, res, next) => {
     var studentFirst=req.body.firstName;
     var studentLast=req.body.lastName;
@@ -66,6 +68,7 @@ api.post('/students/new', (req, res, next) => {
 
 });
 
+// EDIT STUDENT
 api.put('/students/edit/:studentId', (req, res, next) => {
     var studentId=req.params.studentId;
     var studentFirst=req.body.firstName;
@@ -97,6 +100,7 @@ api.put('/students/edit/:studentId', (req, res, next) => {
     }
 });
 
+// DELETE STUDENT
 api.delete('/students/:studentId', (req, res, next) => {
     var studentId=req.params.studentId;
 
@@ -145,10 +149,6 @@ api.get('/campuses', (req, res, next) => {
         res.json(campuses);
     })
     .catch(next);
-
-    // Campuses.findAll({ order: '"name" ASC'})
-    //     .then(campuses => res.json(campuses))
-    //     .catch(next);
 });
 
 // GET BY ID
@@ -262,13 +262,6 @@ api.delete('/campuses/:campusId', (req, res, next) => {
         });
     }
 
-});
-
-
-// JUST IN CASE I DO A LOGIN
-api.get('/users', (req, res, next) => {
-    console.log('users');
-    res.send('Users');
 });
 
 module.exports = api;

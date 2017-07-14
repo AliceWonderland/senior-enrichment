@@ -50,6 +50,7 @@ export default class Campus extends Component{
         return (
 
             <div className="col-md-9">
+
                 <h1>Campuses <Link to="/campuses/new">list view</Link>/<Link to="/campuses/new">grid view</Link></h1>
                 <h2>List of All Campuses ({campuses.length})
                     <Link to="/campuses/new"><button type="button" className="btn btn-primary" style={styles}>+ Add Campus</button></Link>
@@ -59,7 +60,6 @@ export default class Campus extends Component{
                     <thead>
                     <tr>
                         <th>#</th>
-                        {/*<th>Photo</th>*/}
                         <th>Campus Name</th>
                         <th># Students</th>
                         <th></th>
@@ -71,7 +71,6 @@ export default class Campus extends Component{
                             return (
                                 <tr key={campuses.id}>
                                     <td>{ campuses.id }</td>
-                                    {/*<td><Link to={`/campuses/${campuses.id}`}><img src={campuses.image} /></Link></td>*/}
                                     <td><Link to={`/campuses/view/${campuses.id}`}>{ campuses.name }</Link></td>
                                     <td>{campuses.students.length}</td>
                                     <td className="text-right"><button type="button" className="btn btn-xs btn-danger" onClick={this.handleClick} id={campuses.id}>delete</button></td>
@@ -81,6 +80,7 @@ export default class Campus extends Component{
                     }
                     </tbody>
                 </table>
+
             </div>
 
         )

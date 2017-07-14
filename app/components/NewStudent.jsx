@@ -21,12 +21,6 @@ export default class NewStudent extends Component{
         if(!this.formNew){
             var studentId = this.props.match.params.studentId;
 
-            // axios.get(`/api/students/${studentId}`)
-            // .then(res => res.data)
-            // .then(student => {
-            //     this.setState({ student: student[0] });
-            // });
-
             axios.all([
                 axios.get('/api/campuses'),
                 axios.get(`/api/students/${studentId}`)
@@ -37,6 +31,13 @@ export default class NewStudent extends Component{
                 this.setState({ campuses, student  });
             }));
 
+
+            // axios.get(`/api/students/${studentId}`)
+            // .then(res => res.data)
+            // .then(student => {
+            //     this.setState({ student: student[0] });
+            // });
+
         }
         else{
             axios.get('/api/campuses')
@@ -46,7 +47,7 @@ export default class NewStudent extends Component{
     }
 
     // for pre-populated form fields
-    // not working
+    // not working!
     handleChange (e) {
         var formEle=e.target.id;
         var eleValue=e.target.value;
@@ -182,12 +183,6 @@ export default class NewStudent extends Component{
                                // onChange={this.handleChange}
                         />
                     </div>
-                    {/*<div className="form-group">        */}
-                        {/*<label for="studentUsername">Username</label>*/}
-                        {/*<input type="text" className="form-control" id="studentUsername"*/}
-                               {/*defaultValue="@NAME" placeholder="Enter username"*/}
-                        {/*/>*/}
-                    {/*</div>*/}
                     <div className="form-group">
                         <label for="exampleSelect1">Campus</label>
                         <select className="form-control" id="studentCampus">

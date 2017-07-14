@@ -57,6 +57,7 @@ export default class Campus extends Component{
                     <Link to="/campuses/new"><button type="button" className="btn btn-primary" style={styles}>+ Add Campus</button></Link>
                 </h2>
 
+                <hr/>
 
                 <div className="row">
 
@@ -80,12 +81,7 @@ export default class Campus extends Component{
                         })
                     }
 
-
-
-
-
                 </div>
-
             </div>
 
         )

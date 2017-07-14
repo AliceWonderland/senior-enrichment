@@ -52,7 +52,6 @@ export default class Student extends Component{
                     <thead>
                         <tr>
                             <th>#</th>
-                            {/*<th>Photo</th>*/}
                             <th>Student Name</th>
                             <th>Campus</th>
                             <th>Email</th>
@@ -66,7 +65,6 @@ export default class Student extends Component{
                                 return (
                                     <tr key={students.id}>
                                         <td>{ students.id }</td>
-                                        {/*<td><Link to={`/students/${students.id}`}><img src={students.image} style={stylesImg} /></Link></td>*/}
                                         <td><Link to={`/students/view/${students.id}`}>{ `${students.firstName} ${students.lastName}`}</Link></td>
                                         <td><Link to={`/campuses/view/${students.campus.id}`}>{ students.campus.name }</Link></td>
                                         <td>{ students.email }</td>

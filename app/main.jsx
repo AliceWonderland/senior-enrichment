@@ -42,19 +42,6 @@ render (
                                 <li><Link to="/students">Students</Link></li>
                                 <li><Link to="/video">Video</Link></li>
                                 <li><Link to="/readme">ReadMe</Link></li>
-                                {/*<li><Link to="/jokes">Jokes</Link></li>*/}
-                                {/*<li className="dropdown">*/}
-                                    {/*<a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span className="caret"></span></a>*/}
-                                    {/*<ul className="dropdown-menu">*/}
-                                        {/*<li><a href="#">Video</a></li>*/}
-                                        {/*<li><a href="#">ReadMe</a></li>*/}
-                                        {/*<li><a href="#">Something else here</a></li>*/}
-                                        {/*<li role="separator" className="divider"></li>*/}
-                                        {/*<li className="dropdown-header">Nav header</li>*/}
-                                        {/*<li><a href="#">Separated link</a></li>*/}
-                                        {/*<li><a href="#">One more separated link</a></li>*/}
-                                    {/*</ul>*/}
-                                {/*</li>*/}
                             </ul>
                         </div>
                     </div>
@@ -63,7 +50,6 @@ render (
 
                 {/* BODY */}
                 <Switch>
-                    {/*<Route path="/new-playlist" render={() => <NewPlaylist addPlaylist={this.addPlaylist}/>} />*/}
                     <Route exact path="/" component={Home} />
                     <Route exact path="/students" component={Student} />
                     <Route exact path="/campuses" component={Campus} />
