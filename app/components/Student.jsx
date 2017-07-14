@@ -43,7 +43,7 @@ export default class Student extends Component{
 
         return (
 
-            <div className="col-md-7">
+            <div className="col-md-9">
                 <h1>Students</h1>
                 <h2>List of All Students ({students.length})
                     <Link to="/students/new"><button type="button" className="btn btn-primary" style={styles}>+ Add Student</button></Link>

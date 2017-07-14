@@ -19,7 +19,8 @@ module.exports = db.define('student',
         },
         image:{
             type: Sequelize.STRING,
-            allowNull: false
+            allowNull: false,
+            defaultValue: 'https://unsplash.it/g/200/200/?random'
         },
         campusId:{
             type: Sequelize.INTEGER,
@@ -33,6 +34,11 @@ module.exports = db.define('student',
 
 
 
+
+
+
+
+// IGNORE BELOW
 // INSERT INTO students VALUES (DEFAULT,'Alice','Chuang','alice@email.com','https://www.fillmurray.com/100/100',1),
 //     (DEFAULT,'Erica','Chuang','erica@email.com','https://www.fillmurray.com/100/100',1),
 //     (DEFAULT,'Monroe','Chuang','monroe@email.com','https://www.fillmurray.com/100/100',1),

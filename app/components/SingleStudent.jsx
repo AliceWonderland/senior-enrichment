@@ -22,7 +22,7 @@ export default class SingleStudent extends Component{
         var styles = { cssFloat:'right' };
 
         return (
-            <div className="col-md-7">
+            <div className="col-md-9">
                 {
                     student.map(student => {
                         return (
@@ -40,7 +40,7 @@ export default class SingleStudent extends Component{
                                         <ul>
                                             <li>{ `${student.firstName} ${student.lastName}`}</li>
                                             <li>{ student.email }</li>
-                                            <li><Link to={`/campuses/${student.campus.id}`}>{ student.campus.name } Campus</Link></li>
+                                            <li><Link to={`/campuses/view/${student.campus.id}`}>{ student.campus.name } Campus</Link></li>
                                         </ul>
                                     </div>
                                 </div>

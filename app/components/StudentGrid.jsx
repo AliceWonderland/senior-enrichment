@@ -55,19 +55,26 @@ export default class Student extends Component{
                 {
                     students.map(students => {
                         return (
-                        <div>
-                        <div className="media" key={students.id}>
-                            <div className="media-left"><Link to={`/students/view/${students.id}`}><img src={students.image} style={stylesImg} /> </Link> </div>
-                            <div className="media-body"> <h4 className="media-heading"><Link to={`/students/view/${students.id}`}>{ `${students.firstName} ${students.lastName}`}</Link>
-                                <button type="button" onClick={this.handleClick} id={students.id} className="btn btn-xs btn-danger"  style={styles}>delete</button></h4>
-                                Campus: <Link to={`/campuses/view/${students.campus.id}`}>{ students.campus.name }</Link> <br />
-                                Email: { students.email }
+
+
+
+
+
+
+
+
+                        <div className="col-sm-6 col-md-4" key={students.id}>
+                            <div className="thumbnail">
+                                <Link to={`/students/view/${students.id}`}><img src={students.image} /></Link>
+                                <div className="caption">
+                                    <h4><Link to={`/students/view/${students.id}`}>#{students.id} { students.firstName } { students.lastName } </Link></h4>
+                                    <p>on <Link to={`/campuses/view/${students.campus.id}`}>Campus {students.campus.name}</Link></p>
+                                    <p>{students.email}</p>
+                                    <p><Link to={`/students/view/${students.id}`}><button type="button" className="btn btn-default">View</button></Link>                                       <button type="button" className="btn btn-primary" onClick={this.handleClick} id={students.id}>Delete</button>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <hr />
-                        </div>
-
-
 
 
 

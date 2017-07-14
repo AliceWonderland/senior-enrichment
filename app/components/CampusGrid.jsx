@@ -68,7 +68,7 @@ export default class Campus extends Component{
                                     <div className="thumbnail">
                                         <Link to={`/campuses/view/${campuses.id}`}><img src={campuses.image} /></Link>
                                         <div className="caption">
-                                            <h4>Campus <Link to={`/campuses/view/${campuses.id}`}>#{campuses.id} { campuses.name }</Link></h4>
+                                            <h4>Campus <Link to={`/campuses/view/${campuses.id}`}>{ campuses.name } #{campuses.id}</Link></h4>
                                             <p>{campuses.students.length} Students</p>
                                             <p><Link to={`/campuses/view/${campuses.id}`}><button type="button" className="btn btn-default">View</button></Link> <button type="button" className="btn btn-primary" onClick={this.handleClick} id={campuses.id}>Delete</button>
                                             </p>

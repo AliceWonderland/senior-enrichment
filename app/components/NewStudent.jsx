@@ -13,6 +13,7 @@ export default class NewStudent extends Component{
         this.formNew=(formPath==="/students/new");
 
         this.handleSubmit=this.handleSubmit.bind(this);
+        this.handleChange=this.handleChange.bind(this);
     }
 
     componentDidMount(){
@@ -41,6 +42,34 @@ export default class NewStudent extends Component{
             axios.get('/api/campuses')
             .then(res => res.data)
             .then(campuses => this.setState({ campuses: campuses }));
+        }
+    }
+
+    // for pre-populated form fields
+    // not working
+    handleChange (e) {
+        var formEle=e.target.id;
+        var eleValue=e.target.value;
+        if(formEle==='studentFirst'){
+            this.setState({firstName: eleValue});
+        }
+        else if(formEle==='studentLast'){
+            this.setState({lastName: eleValue});
+
+        }
+        else if(formEle==='studentEmail'){
+            this.setState({email: eleValue});
+
+        }
+        else if(formEle==='studentImage'){
+            this.setState({image: eleValue});
+
+        }
+        else if(formEle==='studentCampus'){
+            this.setState({campusId: eleValue});
+        }
+        else{
+            //do nothing
         }
     }
 
@@ -121,6 +150,8 @@ export default class NewStudent extends Component{
                         <input type="text" className="form-control" id="studentFirst"
                                defaultValue={this.formNew ?  ('First Name') : (studentFirst)}
                                placeholder={this.formNew ?  ('First Name') : (studentFirst)}
+                               // value={this.formNew ?  ('First Name') : (studentFirst)}
+                               // onChange={this.handleChange}
                         />
                     </div>
                     <div className="form-group">
@@ -128,6 +159,8 @@ export default class NewStudent extends Component{
                         <input type="text" className="form-control" id="studentLast"
                                defaultValue={this.formNew ?  ('Last Name') : (studentLast)}
                                placeholder={this.formNew ?  ('Last Name') : (studentLast)}
+                               // value={this.formNew ?  ('Last Name') : (studentLast)}
+                               // onChange={this.handleChange}
                         />
                     </div>
                     <div className="form-group">
@@ -135,6 +168,8 @@ export default class NewStudent extends Component{
                         <input type="email" className="form-control" id="studentEmail" aria-describedby="emailHelp"
                                defaultValue={this.formNew ?  ('name@email.com') : (studentEmail)}
                                placeholder={this.formNew ?  ('name@email.com') : (studentEmail)}
+                               // value={this.formNew ?  ('name@email.com') : (studentEmail)}
+                               // onChange={this.handleChange}
                         />
                         <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
@@ -143,6 +178,8 @@ export default class NewStudent extends Component{
                         <input type="text" className="form-control" id="studentImage"
                                defaultValue={this.formNew ?  ('http://lorempixel.com/200/200/nature/') : (studentImage)}
                                placeholder={this.formNew ?  ('http://lorempixel.com/200/200/nature/') : (studentImage)}
+                               // value={this.formNew ?  ('http://lorempixel.com/252/200/nature/') : (studentImage)}
+                               // onChange={this.handleChange}
                         />
                     </div>
                     {/*<div className="form-group">        */}
@@ -153,7 +190,7 @@ export default class NewStudent extends Component{
                     {/*</div>*/}
                     <div className="form-group">
                         <label for="exampleSelect1">Campus</label>
-                        <select className="form-control" id="exampleSelect1">
+                        <select className="form-control" id="studentCampus">
                             {
                                 campuses.map(campuses => {
                                     return (

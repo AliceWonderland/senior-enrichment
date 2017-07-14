@@ -10,8 +10,8 @@ export default class Home extends Component{
                     Interplanetary Academy <br />
                     for Javascript</span>
                 </h1>
-                <h2><i>Meet our illustrious <Link to="/students">Students</Link></i><br />
-                    <i>Browse our beautiful <Link to="/campuses">Campuses</Link></i>
+                <h2><i>Meet our <Link to="/students">Students</Link></i><br />
+                    <i>Browse our <Link to="/campuses">Campuses</Link></i>
                 </h2>
             </div>
         )

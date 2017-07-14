@@ -32,7 +32,7 @@ api.get('/students/:studentId', (req, res, next) => {
 
     if(!Number(studentId)){res.sendStatus(500);}
     else{
-        Students.findAll({where:{id:studentId},include: [ Campuses ]})
+        Students.findAll({where:{id:studentId}, include: [ Campuses ]})
         .then(function (data) {
             if(data){res.json(data)}
             else{

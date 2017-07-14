@@ -10,7 +10,8 @@ module.exports = db.define('campus',
         },
         image:{
             type: Sequelize.STRING,
-            allowNull: false
+            allowNull: false,
+            defaultValue: 'https://unsplash.it/g/252/200/?random'
         }
     },
     {

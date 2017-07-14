@@ -95,8 +95,8 @@ export default class NewCampus extends Component{
                         <label for="campusImage">Image</label>
 
                         <input type="text" className="form-control" id="campusImage"
-                               defaultValue={this.formNew ?  ('http://lorempixel.com/200/200/abstract/') : campusImage}
-                               placeholder={this.formNew ?  ('http://lorempixel.com/200/200/abstract/') : campusImage}
+                               defaultValue={this.formNew ?  ('http://lorempixel.com/252/200/abstract/') : campusImage}
+                               placeholder={this.formNew ?  ('http://lorempixel.com/252/200/abstract/') : campusImage}
                         />
 
                     </div>
