@@ -1,6 +1,7 @@
 # Senior Enrichment Project
 
-Link to Live site  http://app3.alicechuang.com/
+Link to Live Site  http://app3.alicechuang.com/
+
 Link to Video Walkthrough and Code Walkthrough http://app3.alicechuang.com/app3/#/video
 
 ## Getting started
